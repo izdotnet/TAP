@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      :root {
+        --primary-color: #d1884f;
+        --secondary-color: #008aaa;
+        --tertiary-color: #3bbadb;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+      }
+
+      header {
+        color: white;
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav {
+        margin-left: auto;
+        padding-right: 80px;
+        padding-top: 50px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        float: right;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 40px;
+      }
+
+      nav ul li a {
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: black;
+        margin-right: 20px;
+      }
+
+      nav ul li:first-child a {
+        color: var(--primary-color);
+      }
+
+      main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 140px;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      p a {
+        color: var(--tertiary-color);
+        text-decoration: none;
+      }
+
+      .left-section {
+        width: 60%;
+        padding: 20px;
+        max-width: 600px;
+      }
+
+      .right-section {
+        width: 40%;
+        padding: 20px;
+      }
+
+      .profile-picture {
+        width: 100%;
+        border-bottom-left-radius: 25%;
+        border-radius: 0 0 0 50%;
+        box-shadow: -12px 5px 0.2px 5px #3bbbdbb5;
+        transform: rotate(3deg);
+      }
+
+      .hire-me,
+      .see-projects {
+        margin-top: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .hire-me {
+        width: 150px;
+        background-color: var(--secondary-color);
+        color: white;
+        box-shadow: 1px 5px 10px 5px #3bbbdb83;
+      }
+
+      .see-projects {
+        width: 200px;
+        background-color: transparent;
+        border: 2px solid var(--tertiary-color);
+        color: var(--tertiary-color);
+        margin-left: 20px;
+      }
+
+      .h1__title {
+        font-size: 2rem;
+        font-weight: 300;
+        margin: 0;
+        color: var(--tertiary-color);
+        margin-bottom: 30px;
+      }
+
+      .h2__title {
+        font-size: 2.8rem;
+        margin: 0;
+        color: var(--secondary-color);
+      }
+
+      .role__span {
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+
+      /* Media Queries for Responsiveness */
+      @media only screen and (max-width: 768px) {
+        main {
+          flex-direction: column;
+          padding: 50px 20px;
+        }
+        .left-section,
+        .right-section {
+          width: 100%;
+          padding: 20px;
+        }
+        nav {
+          padding-top: 20px;
+          padding-right: 20px;
+          text-align: center;
+        }
+
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav ul li {
+          margin-bottom: 15px;
+          margin-right: 0;
+        }
+        .h1__title,
+        .h2__title {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+        .hire-me,
+        .see-projects {
+          font-size: 18px;
+          padding: 8px;
+        }
+      }
+
+      @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        main {
+          padding: 80px 40px;
+        }
+        .left-section,
+        .right-section {
+          padding: 20px;
+        }
+        nav {
+          padding-right: 40px;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <title>My Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <svg
+              viewBox="0 0 20 20"
+              fill="var(--primary-color)"
+              style="width: 25px; height: 25px"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 20 20"
+              fill="black"
+              style="width: 25px; height: 25px"
+            >
+              <path
+                d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z"
+              />
+            </svg>
+            <a href="#about-me">About Me</a>
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 20 20"
+              fill="black"
+              style="width: 25px; height: 25px"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"
+                clip-rule="evenodd"
+              />
+            </svg>
+
+            <a href="#contact-me">Contact Me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="left-section">
+        <article>
+          <h1 class="h1__title">Welcome to my site</h1>
+          <h2 class="h2__title">
+            Hi, I'm Izat, a full stack
+            <span class="role__span">web developer.</span>
+          </h2>
+          <p>
+            I have over 2 years of experience in web development, and a degree
+            in Information Technologies. I have worked on many freelance
+            projects as well. I am a hardworking and reliable person with 12
+            years experience in management and leadership roles.
+            <a href="#read-more">See more...</a>
+          </p>
+          <button class="hire-me">Hire me!</button>
+          <button class="see-projects">See My Projects</button>
+        </article>
+      </section>
+
+      <section class="right-section">
+        <img
+          src="https://gcdnb.pbrd.co/images/0jjRsAs086Ky.jpg"
+          alt="Profile Picture"
+          class="profile-picture"
+        />
+      </section>
+    </main>
+  </body>
+</html>
